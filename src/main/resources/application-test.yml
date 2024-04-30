@@ -1,0 +1,23 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb2
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+jwt:
+  access-token:
+    name: access-token
+    secret: accessSecret
+    expiration: 2592000000
+  refresh-token:
+    name: refresh-token
+    secret: refreshSecret
+    expiration: 2592000000
+front:
+  url: http://localhost:3000
